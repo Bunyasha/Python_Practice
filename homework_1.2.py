@@ -12,7 +12,24 @@ while True:
     else:
         break
 
+i = 2
+j = number - 1
+count = 0
+
 if number == 1 or number == 0:
     print(f"Число {number} — не является ни простым, ни составным числом, так как у него только один делитель")
 else:
-    print("Сейчас всё решим")
+    while i <= j:
+        if number % i == 0:
+            count +=1
+            i +=1 
+        else:
+            i +=1
+
+    if count == 0:
+        print(f"Число {number} является простым")
+    else:
+        print(f"Число {number} является составным")
+
+
+    
